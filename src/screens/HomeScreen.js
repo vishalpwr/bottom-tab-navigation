@@ -10,7 +10,7 @@ import {
     ScrollView
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import { Caption, Card, Title } from 'react-native-paper';
+import { Title } from 'react-native-paper';
 import AppIcon, { Icons } from '../components/AppIcon';
 import CollectionItem from '../components/CollectionItem';
 import ProductItem from '../components/ProductItem';
