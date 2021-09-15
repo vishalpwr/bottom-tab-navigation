@@ -26,11 +26,13 @@ const HomeScreen = () => {
                 <View style={styles.header}>
                     <TouchableOpacity style={styles.menu}>
                         <AppIcon type={Icons.Ionicons} name="menu" size={24} color={Colors.gray} />
-
                     </TouchableOpacity>
                     <View style={styles.profileView}>
                         <TouchableOpacity style={styles.profile}>
-                            <Image style={styles.image} source={require('../assets/image/profileImg.jpg')} />
+                            <Image
+															style={styles.image}
+															source={{uri: 'https://st2.depositphotos.com/3310833/7828/v/380/depositphotos_78289624-stock-illustration-flat-hipster-character.jpg'}}
+														/>
                         </TouchableOpacity>
                     </View>
                     <TouchableOpacity style={styles.search}>

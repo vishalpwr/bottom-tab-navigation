@@ -3,7 +3,6 @@ import React from 'react';
 import {
   StyleSheet,
   View,
-  StatusBar,
   TouchableOpacity,
 } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
@@ -33,27 +32,6 @@ const BottomTab = ({ type, color, size = 24, isFocused, index }) => {
         </View>
       )}
     </View>
-  )
-}
-
-const App = () => {
-  return (
-    <NavigationContainer>
-      <TabNavigator />
-    </NavigationContainer>
-  )
-};
-
-const Tab = createBottomTabNavigator();
-
-const TabNavigator = () => {
-  return (
-    <Tab.Navigator
-      tabBar={(props) => <MyTabBar {...props} />}>
-      <Tab.Screen name="home" component={HomeScreen} />
-      <Tab.Screen name="Shop" component={ShopScreen} />
-      <Tab.Screen name="Favorite" component={FavoriteScreen} />
-    </Tab.Navigator>
   )
 }
 
@@ -97,6 +75,27 @@ const MyTabBar = ({ state, descriptors, navigation }) => {
     </View>
   )
 }
+
+const Tab = createBottomTabNavigator();
+
+const TabNavigator = () => {
+  return (
+    <Tab.Navigator
+      tabBar={(props) => <MyTabBar {...props} />}>
+      <Tab.Screen name="home" component={HomeScreen} />
+      <Tab.Screen name="Shop" component={ShopScreen} />
+      <Tab.Screen name="Favorite" component={FavoriteScreen} />
+    </Tab.Navigator>
+  )
+}
+
+const App = () => {
+  return (
+    <NavigationContainer>
+      <TabNavigator />
+    </NavigationContainer>
+  )
+};
 
 const styles = StyleSheet.create({
   bottomBar: {
